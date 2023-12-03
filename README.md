@@ -21,3 +21,7 @@ Then feel free to run:
 
 * [yc](Formula/nebius-yc.rb) - [Official documentation](https://nebius.com/il/docs/cli)
 `brew install nebius-yc`
+
+* [ydb-cli](Formula/ydb-cli.rb) - [Official documentation](https://ydb.tech/en/docs/reference/ydb-cli/)
+`brew install ydb-cli`
+
