@@ -49,6 +49,9 @@ class NebiusNcp < Formula
     # FIXME: Until more efficient solution, workaround
     generate_completions_from_executable("/usr/bin/env", "HOME=#{HOMEBREW_TEMP}", bin/"ncp",
       "completion", shells: [:bash, :zsh], base_name: "ncp")
+
+    # FIXME: shell completion can have some elements to fix
+    system "sed", "-i old", "-e s/_yc_/_ncp_/g", "#{zsh_completion}/_ncp"
   end
 
   def caveats
