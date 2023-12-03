@@ -19,3 +19,5 @@ Then feel free to run:
 * [ncp](Formula/nebius-ncp.rb) - [Official documentation](https://nebius.ai/docs/cli)
 `brew install nebius-ncp`
 
+* [yc](Formula/nebius-yc.rb) - [Official documentation](https://nebius.com/il/docs/cli)
+`brew install nebius-yc`
