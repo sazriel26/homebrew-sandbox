@@ -51,7 +51,8 @@ class NebiusNcp < Formula
       "completion", shells: [:bash, :zsh], base_name: "ncp")
 
     # FIXME: shell completion can have some elements to fix
-    system "sed", "-i old", "-e s/_yc_/_ncp_/g", "#{zsh_completion}/_ncp"
+    system "sed", "-i.nok", "-e s/_yc_/_ncp_/g", "-e 1s/yc/ncp/", "#{zsh_completion}/_ncp"
+    rm("#{zsh_completion}/_ncp.nok")
   end
 
   def caveats
