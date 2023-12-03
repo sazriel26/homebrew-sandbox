@@ -16,4 +16,6 @@ Then feel free to run:
 
 ## Content of this Homebrew TAP
 
-(empty)
+* [ncp](Formula/nebius-ncp.rb) - [Official documentation](https://nebius.ai/docs/cli)
+`brew install nebius-ncp`
+
