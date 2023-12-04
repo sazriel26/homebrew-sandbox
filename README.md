@@ -33,14 +33,13 @@ available on Internet.
 
 ### Nebius
 
-* [ncp](Formula/nebius-ncp.rb) - [Official documentation](https://nebius.ai/docs/cli)
-`brew install nebius-ncp`
+* [ncp](Formula/nebius-ncp.rb) (`brew install nebius-ncp`)
+  [Official documentation](https://nebius.ai/docs/cli)
 
-* [yc](Formula/nebius-yc.rb) - [Official documentation](https://nebius.com/il/docs/cli)
-`brew install nebius-yc`
+* [yc](Formula/nebius-yc.rb) (`brew install nebius-yc`)
+  [Official documentation](https://nebius.com/il/docs/cli)
 
 ### Yandex
 
-* [ydb-cli](Formula/ydb-cli.rb) - [Official documentation](https://ydb.tech/en/docs/reference/ydb-cli/)
-`brew install ydb-cli`
-
+* [ydb-cli](Formula/ydb-cli.rb) (`brew install ydb-cli`)
+  [Official documentation](https://ydb.tech/en/docs/reference/ydb-cli/)
