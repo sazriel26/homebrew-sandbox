@@ -31,6 +31,11 @@ Here are some miscallenous [Homebrew](https://brew.sh)
 [formulas](https://docs.brew.sh/Formula-Cookbook) of programs publicly 
 available on Internet.
 
+### Unsorted
+
+* [xsos](Formula/xsos.rb) (`brew install xsos`)
+  [Homepage](https://github.com/ryran/xsos)
+
 ### Nebius
 
 * [ncp](Formula/nebius-ncp.rb) (`brew install nebius-ncp`)
