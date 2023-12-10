@@ -33,6 +33,9 @@ available on Internet.
 
 ### Unsorted
 
+* [harview](Formula/harview.rb) (`brew install harview`)
+  [Homepage](https://github.com/fboender/harview)
+
 * [xsos](Formula/xsos.rb) (`brew install xsos`)
   [Homepage](https://github.com/ryran/xsos)
 
