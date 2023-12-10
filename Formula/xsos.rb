@@ -8,7 +8,7 @@ class Xsos < Formula
     revision: "37aaa07b3bb17e4935b337686b9c4fe43db7202f"
 
   livecheck do
-    url :stable
+    url :head
     strategy :github_latest
   end
 
@@ -21,6 +21,8 @@ class Xsos < Formula
 
   def install
     bin.install "xsos"
+
+    bash_completion.install "xsos-bash-completion.bash"
   end
 end
 __END__
