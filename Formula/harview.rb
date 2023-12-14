@@ -8,6 +8,10 @@ class Harview < Formula
 
   url "https://github.com/fboender/harview.git"
 
+  livecheck do
+    skip "There is no known version"
+  end
+
 #  depends_on "python"
 
   uses_from_macos "python"
