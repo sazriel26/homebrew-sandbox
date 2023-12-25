@@ -39,15 +39,15 @@ available on Internet.
 * [xsos](Formula/xsos.rb) (`brew install xsos`)
   [Homepage](https://github.com/ryran/xsos)
 
-### Nebius
+### Nebius Cloud
 
-* [ncp](Formula/nebius-ncp.rb) (`brew install nebius-ncp`)
+* [ncp](Formula/nebius-ncp-ai.rb) (`brew install nebius-ncp-ai`)
   [Official documentation](https://nebius.ai/docs/cli)
 
-* [yc](Formula/nebius-yc.rb) (`brew install nebius-yc`)
+* [yc](Formula/nebius-ncp-il.rb) (`brew install nebius-ncp-il`)
   [Official documentation](https://nebius.com/il/docs/cli)
 
-### Yandex
+### Yandex DB
 
 * [ydb-cli](Formula/ydb-cli.rb) (`brew install ydb-cli`)
   [Official documentation](https://ydb.tech/en/docs/reference/ydb-cli/)

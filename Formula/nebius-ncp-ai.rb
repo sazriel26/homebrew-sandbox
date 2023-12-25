@@ -1,5 +1,5 @@
-class NebiusNcp < Formula
-  desc "Nebius AI CLI"
+class NebiusNcpAi < Formula
+  desc "Nebius Cloud CLI (AI)"
   homepage "https://nebius.ai"
   version "0.116.0+Nebius-AI"
   license :cannot_represent
