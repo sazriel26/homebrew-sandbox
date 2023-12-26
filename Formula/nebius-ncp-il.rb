@@ -50,7 +50,10 @@ class NebiusNcpIl < Formula
       "completion", shells: [:bash, :zsh], base_name: "ncp-il")
 
     # FIXME: shell completion can have some elements to fix
-    system "sed", "-i.nok", "-e s/_yc_/_ncp_il_/g", "-e 1s/yc/ncp-il/", "#{zsh_completion}/_ncp-il"
+    system "sed", "-i.nok",
+      "-e s/_yc_/_ncp_il_/g", "-e 1s/yc/ncp-il/",
+      "-e /_ncp_/ { /_ncp_il/! s/_ncp_/_ncp_il_/g; }",
+      "#{zsh_completion}/_ncp-il"
     rm("#{zsh_completion}/_ncp-il.nok")
   end
 
