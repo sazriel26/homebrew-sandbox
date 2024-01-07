@@ -62,7 +62,7 @@ class NebiusNcpAi < Formula
     <<~EOS
       Add the following alias to your Shell RC (~/.zshrc or ~/.profile)
 
-        alias docker-credential-ncp='ncp --no-user-output container docker-credential'
+        alias docker-credential-ncp.ai='ncp.ai --no-user-output container docker-credential'
 
       For more information, please kindly consult #{homepage}/docs/cli
     EOS
