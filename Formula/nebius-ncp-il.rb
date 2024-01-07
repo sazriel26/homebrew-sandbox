@@ -1,5 +1,5 @@
 class NebiusNcpIl < Formula
-  desc "Nebius Cloud CLI (IL)"
+  desc "Nebius Cloud Platform CLI (IL)"
   homepage "https://nebius.com/il"
   version "0.116.1+Nebius-IL"
   license :cannot_represent
@@ -39,35 +39,37 @@ class NebiusNcpIl < Formula
 
   def install
     # Only one binary to link
-    bin.install "ncp" => "ncp-il"
+    bin.install "ncp" => "ncp.il"
     # FIXME: binary has not 0555 as expected (Homebrew 4.1.22-55-gd68e3e5)
     # [https://docs.brew.sh/Formula-Cookbook#bininstall-foo]
-    chmod(0555, bin/"ncp-il")
+    chmod(0555, bin/"ncp.il")
 
     # Install shell completions
     # FIXME: Until more efficient solution, workaround
-    generate_completions_from_executable("/usr/bin/env", "HOME=#{HOMEBREW_TEMP}", bin/"ncp-il",
-      "completion", shells: [:bash, :zsh], base_name: "ncp-il")
+    generate_completions_from_executable("/usr/bin/env", "HOME=#{HOMEBREW_TEMP}", bin/"ncp.il",
+      "completion", shells: [:bash, :zsh], base_name: "ncp.il")
 
     # FIXME: shell completion can have some elements to fix
-    system "sed", "-i.nok",
-      "-e s/_yc_/_ncp_il_/g", "-e 1s/yc/ncp-il/",
-      "-e /_ncp_/ { /_ncp_il/! s/_ncp_/_ncp_il_/g; }",
-      "#{zsh_completion}/_ncp-il"
-    rm("#{zsh_completion}/_ncp-il.nok")
+    system "sed",
+      "-i.nok",
+      "-e /^#compdef/s/#compdef .*/#compdef ncp/",
+      "-e s/_yc_/_ncp_/g",
+      "-e /ncp/ { /ncp\.il/! s/ncp/ncp.il/g; }",
+      "#{zsh_completion}/_ncp.il"
+    rm("#{zsh_completion}/_ncp.il.nok")
   end
 
   def caveats
     <<~EOS
       Add the following alias to your Shell RC (~/.zshrc or ~/.profile)
 
-        alias docker-credential-ncp-il='ncp-il --no-user-output container docker-credential'
+        alias docker-credential-ncp.il='ncp.il --no-user-output container docker-credential'
 
       For more information, please kindly consult #{homepage}/docs/cli
     EOS
   end
 
   test do
-    assert_match "#{version}", shell_output("#{bin}/ncp-il version --semantic")
+    assert_match "#{version}", shell_output("#{bin}/ncp.il version --semantic")
   end
 end

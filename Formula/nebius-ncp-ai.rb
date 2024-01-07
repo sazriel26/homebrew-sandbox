@@ -1,5 +1,5 @@
 class NebiusNcpAi < Formula
-  desc "Nebius Cloud CLI (AI)"
+  desc "Nebius Cloud Platform CLI (AI)"
   homepage "https://nebius.ai"
   version "0.116.1+Nebius-AI"
   license :cannot_represent
@@ -38,22 +38,24 @@ class NebiusNcpAi < Formula
   end
 
   def install
-    bin.install "ncp" => "ncp-ai"
+    bin.install "ncp" => "ncp.ai"
     # FIXME: binary has not 0555 as expected (Homebrew 4.1.22-55-gd68e3e5)
     # [https://docs.brew.sh/Formula-Cookbook#bininstall-foo]
-    chmod(0555, bin/"ncp-ai")
+    chmod(0555, bin/"ncp.ai")
 
     # Install shell completions
     # FIXME: Until more efficient solution, workaround
-    generate_completions_from_executable("/usr/bin/env", "HOME=#{HOMEBREW_TEMP}", bin/"ncp-ai",
-      "completion", shells: [:bash, :zsh], base_name: "ncp-ai")
+    generate_completions_from_executable("/usr/bin/env", "HOME=#{HOMEBREW_TEMP}", bin/"ncp.ai",
+      "completion", shells: [:bash, :zsh], base_name: "ncp.ai")
 
     # FIXME: shell completion can have some elements to fix
-    system "sed", "-i.nok",
-      "-e s/_yc_/_ncp_ai_/g", "-e 1s/yc/ncp-ai/",
-      "-e /_ncp_/ { /_ncp_ai/! s/_ncp_/_ncp_ai_/g; }",
-      "#{zsh_completion}/_ncp-ai"
-    rm("#{zsh_completion}/_ncp-ai.nok")
+    system "sed",
+      "-i.nok",
+      "-e /^#compdef/s/#compdef .*/#compdef ncp/",
+      "-e s/_yc_/_ncp_/g",
+      "-e /ncp/ { /ncp\.ai/! s/ncp/ncp.ai/g; }",
+      "#{zsh_completion}/_ncp.ai"
+    rm("#{zsh_completion}/_ncp.ai.nok")
   end
 
   def caveats
@@ -67,6 +69,6 @@ class NebiusNcpAi < Formula
   end
 
   test do
-    assert_match "#{version}", shell_output("#{bin}/ncp-ai version --semantic")
+    assert_match "#{version}", shell_output("#{bin}/ncp.ai version --semantic")
   end
 end
