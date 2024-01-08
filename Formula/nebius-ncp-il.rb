@@ -50,6 +50,7 @@ class NebiusNcpIl < Formula
       "completion", shells: [:bash, :zsh], base_name: "ncp.il")
 
     # FIXME: shell completion can have some elements to fix
+    # ZSH
     system "sed",
       "-i.nok",
       "-e /^#compdef/s/#compdef .*/#compdef ncp/",
@@ -57,6 +58,12 @@ class NebiusNcpIl < Formula
       "-e /ncp/ { /ncp\.il/! s/ncp/ncp.il/g; }",
       "#{zsh_completion}/_ncp.il"
     rm("#{zsh_completion}/_ncp.il.nok")
+    # BASH
+    system "sed",
+      "-i.nok",
+      "-e /ncp/ { /ncp\.il/! s/ncp/ncp.il/g; }",
+      "#{bash_completion}/ncp.il"
+    rm("#{bash_completion}/ncp.il.nok")
   end
 
   def caveats

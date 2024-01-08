@@ -49,6 +49,7 @@ class NebiusNcpAi < Formula
       "completion", shells: [:bash, :zsh], base_name: "ncp.ai")
 
     # FIXME: shell completion can have some elements to fix
+    # ZSH
     system "sed",
       "-i.nok",
       "-e /^#compdef/s/#compdef .*/#compdef ncp/",
@@ -56,6 +57,12 @@ class NebiusNcpAi < Formula
       "-e /ncp/ { /ncp\.ai/! s/ncp/ncp.ai/g; }",
       "#{zsh_completion}/_ncp.ai"
     rm("#{zsh_completion}/_ncp.ai.nok")
+    # BASH
+    system "sed",
+      "-i.nok",
+      "-e /ncp/ { /ncp\.ai/! s/ncp/ncp.ai/g; }",
+      "#{bash_completion}/ncp.ai"
+    rm("#{bash_completion}/ncp.ai.nok")
   end
 
   def caveats
