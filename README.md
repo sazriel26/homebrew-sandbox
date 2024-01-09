@@ -41,10 +41,10 @@ available on Internet.
 
 ### Nebius Cloud
 
-* [ncp](Formula/nebius-ncp-ai.rb) (`brew install nebius-ncp-ai`)
+* [nebius-ncp-ai](Formula/nebius-ncp-ai.rb) (`brew install nebius-ncp-ai`)
   [Official documentation](https://nebius.ai/docs/cli)
 
-* [yc](Formula/nebius-ncp-il.rb) (`brew install nebius-ncp-il`)
+* [nebius-ncp-il](Formula/nebius-ncp-il.rb) (`brew install nebius-ncp-il`)
   [Official documentation](https://nebius.com/il/docs/cli)
 
 ### Yandex DB
