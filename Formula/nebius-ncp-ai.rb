@@ -3,6 +3,7 @@ class NebiusNcpAi < Formula
   homepage "https://nebius.ai"
   version "0.116.3+Nebius-AI"
   license :cannot_represent
+  revision 1
 
   # FIXME: Do not use with homebrew, only refering to version check for automation :)
   livecheck do
@@ -52,8 +53,6 @@ class NebiusNcpAi < Formula
     # ZSH
     system "sed",
       "-i.nok",
-      "-e /^#compdef/s/#compdef .*/#compdef ncp/",
-      "-e s/_yc_/_ncp_/g",
       "-e /ncp/ { /ncp\.ai/! s/ncp/ncp.ai/g; }",
       "#{zsh_completion}/_ncp.ai"
     rm("#{zsh_completion}/_ncp.ai.nok")

@@ -3,6 +3,7 @@ class NebiusNcpIl < Formula
   homepage "https://nebius.com/il"
   version "0.116.3+Nebius-IL"
   license :cannot_represent
+  revision 1
 
   # FIXME: Do not use with homebrew, only refering to version check for automation :)
   livecheck do
@@ -53,8 +54,6 @@ class NebiusNcpIl < Formula
     # ZSH
     system "sed",
       "-i.nok",
-      "-e /^#compdef/s/#compdef .*/#compdef ncp/",
-      "-e s/_yc_/_ncp_/g",
       "-e /ncp/ { /ncp\.il/! s/ncp/ncp.il/g; }",
       "#{zsh_completion}/_ncp.il"
     rm("#{zsh_completion}/_ncp.il.nok")
