@@ -1,7 +1,7 @@
 class NebiusNcpAi < Formula
   desc "Nebius Cloud Platform CLI (AI)"
   homepage "https://nebius.ai"
-  version "0.116.3+Nebius-AI"
+  version "0.116.4+Nebius-AI"
   license :cannot_represent
   revision 1
 
@@ -14,26 +14,26 @@ class NebiusNcpAi < Formula
   on_macos do
     on_arm do
       url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/darwin/arm64/ncp", using: :nounzip
-      sha256 "2a72614344f53136e666cc47a9daec0e2b9f9db1d28eda5cc1d1ef2cdb762e52"
+      sha256 "8f6077b43382ea25832cd0c55792fd432f6f51c4ebbc864dc56b421b12335fe0"
     end
     on_intel do
       url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/darwin/amd64/ncp", using: :nounzip
-      sha256 "01df394efb06015f319f3d34f0d2f46fb1ae6bb13bd1b3d3c4d53f147eecebfd"
+      sha256 "3c531e46ef6686b82c58f694d3848533e67b34434fb1bf171d46719ce5f84e6f"
     end
   end
 
   on_linux do
     on_arm do
       url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/linux/arm64/ncp", using: :nounzip
-      sha256 "2877b62fa2bb4c6ea209e9ef5fd731c1d686103c54a7522b3426bafe2ab5597f"
+      sha256 "bebf58fada3778f2c47f6aaba305e69d4f9f07dc387975e85c2470ff7d45e406"
     end
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/linux/amd64/ncp", using: :nounzip
-        sha256 "afe608262e54703b961d9738d800c9fe301dfbe07e4ca9da30d1f1c8776dbc70"
+        sha256 "604e93e48c33b9145126500ef45b13843036ac6e5ae2b48af47f7b4b6b6c292b"
       else
         url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/linux/386/ncp", using: :nounzip
-        sha256 "673dcf5c31a166c19b41ed5877b5042fcd9ddafb8a4dc03ca81af044778e97ae"
+        sha256 "05c022d465657c80c30e44597de428d732e914f07ac3d3c786d7ff6d7310c93a"
       end
     end
   end
