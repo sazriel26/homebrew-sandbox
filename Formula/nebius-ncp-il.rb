@@ -1,7 +1,7 @@
 class NebiusNcpIl < Formula
   desc "Nebius Cloud Platform CLI (IL)"
   homepage "https://nebius.com/il"
-  version "0.116.3+Nebius-IL"
+  version "0.116.5+Nebius-IL"
   license :cannot_represent
   revision 1
 
@@ -14,26 +14,26 @@ class NebiusNcpIl < Formula
   on_macos do
     on_arm do
       url "https://storage.il.nebius.cloud/ncp/release/#{version}/darwin/arm64/ncp", using: :nounzip
-      sha256 "12c74123b587861a36a7f414e69e7b1faae709cad4dc102c99111344131b25df"
+      sha256 "405e0acfd1c560a72839f0702c75ec1c1da4a9a8e91fa3c3917b0b0ce49ce541"
     end
     on_intel do
       url "https://storage.il.nebius.cloud/ncp/release/#{version}/darwin/amd64/ncp", using: :nounzip
-      sha256 "023605d0734901f9c954a3ce907eeb03812ad5b94f517064fe6c1aecf7d8f855"
+      sha256 "577cbf09f14ae638650ef96a41250350dd0da2ca807d1183ea3156275c0a0c0e"
     end
   end
 
   on_linux do
     on_arm do
       url "https://storage.il.nebius.cloud/ncp/release/#{version}/linux/arm64/ncp", using: :nounzip
-      sha256 "c0922e8fccafc9c52ef90c62e0ea00ce2364653c462bb9d7b1de3a873fb9674a"
+      sha256 "79bf52cd0591a5c1fea03240683cfbe1cf90deaa107bf34ffa7510df416cb1b6"
     end
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://storage.il.nebius.cloud/ncp/release/#{version}/linux/amd64/ncp", using: :nounzip
-        sha256 "1a22b7310e519c1da378da0330fed09a288af88120298419fd41f492296d83c9"
+        sha256 "6ae25249f60ca234b397b09a5fd5a695a6a0d7d4fe907733fc4b7b2ec0b1ef99"
       else
         url "https://storage.il.nebius.cloud/ncp/release/#{version}/linux/386/ncp", using: :nounzip
-        sha256 "74864cc68a3fec57149f3c9ea3d9254a519d093ded6e1d7b654a1ca05458a689"
+        sha256 "19c5754d978cadba648aa679de95af8d7e1c4ab0ae64538c05bc11847de4240e"
       end
     end
   end
