@@ -1,11 +1,11 @@
 class Xsos < Formula
   desc "sosreport examiner"
   homepage "https://github.com/ryran/xsos"
-  version "0.7.30"
+  version "0.7.32"
   license "GPL"
 
   url "https://github.com/ryran/xsos.git",
-    revision: "37aaa07b3bb17e4935b337686b9c4fe43db7202f"
+    revision: "b43adfadef6669eaffa4a81efc70e29d427feeb0"
 
   livecheck do
     url :head
