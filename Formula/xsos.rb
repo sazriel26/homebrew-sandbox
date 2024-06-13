@@ -3,6 +3,7 @@ class Xsos < Formula
   homepage "https://github.com/ryran/xsos"
   version "0.7.32"
   license "GPL"
+  revision 1
 
   url "https://github.com/ryran/xsos.git",
     revision: "b43adfadef6669eaffa4a81efc70e29d427feeb0"
@@ -18,6 +19,7 @@ class Xsos < Formula
   depends_on "coreutils"
   depends_on "gawk"
   depends_on "gnu-getopt"
+  depends_on "gnu-sed"
 
   def install
     bin.install "xsos"
@@ -36,7 +38,7 @@ index b02e428..185cdc9 100755
  
 +# Homebrew GNU tools
 +if ! [[ "${PATH}" =~ ^HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin ]]; then
-+  export PATH="HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:HOMEBREW_PREFIX/opt/gnu-getopt/bin:HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:${PATH}"
++  export PATH="HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:HOMEBREW_PREFIX/opt/gnu-getopt/bin:HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:${PATH}"
 +fi
 +# Homebrew workaround for latest BASH
 +if ! [[ "${SHELL}" == "HOMEBREW_PREFIX/bin/bash" ]]; then
