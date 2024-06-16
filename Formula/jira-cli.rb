@@ -3,7 +3,7 @@ class JiraCli < Formula
   homepage "https://github.com/ankitpokhrel/jira-cli"
   license "MIT"
   version "1.5.1"
-  revision 1
+  revision 2
 
   url "https://github.com/ankitpokhrel/jira-cli.git"
   livecheck do
@@ -34,8 +34,10 @@ class JiraCli < Formula
   end
 
   def install
-    # Only one binary to link
     bin.install "bin/jira" => "jira-cli"
+
+    generate_completions_from_executable(bin/"jira-cli",
+      "completion", base_name: "jira-cli")
   end
 
   def caveats
