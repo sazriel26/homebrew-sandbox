@@ -3,7 +3,7 @@ class JiraCli < Formula
   homepage "https://github.com/ankitpokhrel/jira-cli"
   license "MIT"
   version "1.5.1"
-  revision 2
+  revision 3
 
   url "https://github.com/ankitpokhrel/jira-cli.git"
   livecheck do
@@ -14,6 +14,7 @@ class JiraCli < Formula
   on_macos do
     on_arm do
       url "#{homepage}/releases/download/v#{version}/jira_#{version}_macOS_arm64.tar.gz"
+      sha256 "ba0b04a86928808a8fdc80bc210f2621246b4fea237de3f4ec84d495f8de5641"
     end
     on_intel do
       url "#{homepage}/releases/download/v#{version}/jira_#{version}_macOS_x86_64.tar.gz"
@@ -38,6 +39,20 @@ class JiraCli < Formula
 
     generate_completions_from_executable(bin/"jira-cli",
       "completion", base_name: "jira-cli")
+
+    # FIXME: shell completion can have some elements to fix
+    # ZSH
+    system "sed",
+      "-i.nok",
+      "-e /jira/ { s/jira/jira-cli/g; }",
+      "#{zsh_completion}/_jira-cli"
+    rm("#{zsh_completion}/_jira-cli.nok")
+    # BASH
+    system "sed",
+      "-i.nok",
+      "-e /jira/ { s/jira/jira-cli/g; }",
+      "#{bash_completion}/jira-cli"
+    rm("#{bash_completion}/jira-cli.nok")
   end
 
   def caveats
