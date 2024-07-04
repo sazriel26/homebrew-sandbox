@@ -5,8 +5,7 @@ class Xsos < Formula
   license "GPL"
   revision 1
 
-  url "https://github.com/ryran/xsos.git",
-    revision: "b43adfadef6669eaffa4a81efc70e29d427feeb0"
+  head "https://github.com/ryran/xsos.git"
 
   livecheck do
     url :head
