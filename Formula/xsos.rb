@@ -1,7 +1,7 @@
 class Xsos < Formula
   desc "sosreport examiner"
   homepage "https://github.com/ryran/xsos"
-  version "0.7.32"
+  version "HEAD"
   license "GPL"
   revision 1
 
