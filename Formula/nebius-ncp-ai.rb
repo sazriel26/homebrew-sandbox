@@ -14,26 +14,21 @@ class NebiusNcpAi < Formula
   on_macos do
     on_arm do
       url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/darwin/arm64/ncp", using: :nounzip
-      sha256 "8ac91dbec4ffbef9fa0e0a62ca2d824d2ea7872441c4a276d8617947c82d599b"
     end
     on_intel do
       url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/darwin/amd64/ncp", using: :nounzip
-      sha256 "bf4dc20f9d96ce4108d90af2351512fe8be1c57d01a77ea0d8b25c6ff75a58fe"
     end
   end
 
   on_linux do
     on_arm do
       url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/linux/arm64/ncp", using: :nounzip
-      sha256 "00dfdad75cd6583261416ece90f08a6118fcf061f0f3de378a9f94ced126e522"
     end
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/linux/amd64/ncp", using: :nounzip
-        sha256 "76c3c37482a3e190ced37de3aa90f00757f4105ed85795c1795580842671b38e"
       else
         url "https://storage.nemax.nebius.cloud/ncp/release/#{version}/linux/386/ncp", using: :nounzip
-        sha256 "db7a08e44b41db28ca80e510b9f0d93bb943b05b53c3c8812927b0521e6d3d02"
       end
     end
   end

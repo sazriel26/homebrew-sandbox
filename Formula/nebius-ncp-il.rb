@@ -14,26 +14,21 @@ class NebiusNcpIl < Formula
   on_macos do
     on_arm do
       url "https://storage.il.nebius.cloud/ncp/release/#{version}/darwin/arm64/ncp", using: :nounzip
-      sha256 "7d4d6db17b4ba434a4bee586b09ef8118fe32b11b5b0048e2b06f01004d46f8e"
     end
     on_intel do
       url "https://storage.il.nebius.cloud/ncp/release/#{version}/darwin/amd64/ncp", using: :nounzip
-      sha256 "66a1a18f977b98237b2c6f5bf25474f67052b58c40cb1455671ee50e03b38b8b"
     end
   end
 
   on_linux do
     on_arm do
       url "https://storage.il.nebius.cloud/ncp/release/#{version}/linux/arm64/ncp", using: :nounzip
-      sha256 "ba8b1e051beda0cbf6f3fbc671216e04ffd4a7f484c14843cd386b80f30cd5c6"
     end
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://storage.il.nebius.cloud/ncp/release/#{version}/linux/amd64/ncp", using: :nounzip
-        sha256 "a4bd403cd0b6162aa4f47d5bd6d237c1abeed2ddaea99102ac3d5987ae0171a7"
       else
         url "https://storage.il.nebius.cloud/ncp/release/#{version}/linux/386/ncp", using: :nounzip
-        sha256 "0371eabb6a79ccef50136eabb4a975d3c9ba3b0050348b2b5cd54218f23fcd78"
       end
     end
   end
