@@ -3,7 +3,7 @@ class JiraCli < Formula
   homepage "https://github.com/ankitpokhrel/jira-cli"
   license "MIT"
   version "1.5.1"
-  revision 3
+  revision 1
 
   url "https://github.com/ankitpokhrel/jira-cli.git"
   livecheck do
