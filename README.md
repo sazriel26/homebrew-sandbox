@@ -36,8 +36,14 @@ available on Internet.
 * [harview](Formula/harview.rb) (`brew install harview`)
   [Homepage](https://github.com/fboender/harview)
 
-* [xsos](Formula/xsos.rb) (`brew install xsos`)
+* [jira-cli](Formula/jira-cli.rb) (`brew install jira-cli`)
+  [Homepage](https://github.com/ankitpokhrel/jira-cli)
+
+* [xsos](Formula/xsos.rb) (`brew install --HEAD xsos`)
   [Homepage](https://github.com/ryran/xsos)
+
+* [ydb-cli](Formula/ydb-cli.rb) (`brew install ydb-cli`)
+  [Homepage](https://ydb.tech)
 
 ### Nebius Cloud
 
