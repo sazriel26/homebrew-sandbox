@@ -1,7 +1,7 @@
 class YdbCli < Formula
   desc "Yandex DB CLI"
   homepage "https://ydb.tech"
-  version "2.10.0"
+  version "2.11.0"
   license :cannot_represent
 
   # FIXME: Do not use with homebrew, only refering to version check for automation :)
