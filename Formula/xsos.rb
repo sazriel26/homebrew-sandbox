@@ -8,8 +8,7 @@ class Xsos < Formula
   head "https://github.com/ryran/xsos.git"
 
   livecheck do
-    url :head
-    strategy :github_latest
+    skip "GitHub version not updated, HEAD only"
   end
 
   patch :DATA
