@@ -1,15 +1,13 @@
 class Xsos < Formula
   desc "sosreport examiner"
   homepage "https://github.com/ryran/xsos"
-  version "0.7.33"
-  license "GPL"
-  revision 1
+  license "GPL-3.0-or-later"
 
-  head "https://github.com/ryran/xsos.git"
+  url "https://github.com/ryran/xsos.git",
+    tag: "v0.7.19"
 
-  livecheck do
-    skip "GitHub version not updated, HEAD only"
-  end
+  head "https://github.com/ryran/xsos.git",
+    branch: "master"
 
   patch :DATA
 
