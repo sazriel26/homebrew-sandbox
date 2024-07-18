@@ -4,7 +4,6 @@ class YdbCli < Formula
   version "2.11.0"
   license :cannot_represent
 
-  # FIXME: Do not use with homebrew, only refering to version check for automation :)
   livecheck do
     url "https://storage.yandexcloud.net/yandexcloud-ydb/release/stable"
     regex(/^(.+)$/i)
@@ -39,6 +38,6 @@ class YdbCli < Formula
   end
 
   test do
-    assert_match "#{version}", shell_output("#{bin}/ydb version --semantic")
+    assert_match "version.to_s", shell_output("#{bin}/ydb version --semantic")
   end
 end

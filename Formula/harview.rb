@@ -3,8 +3,8 @@ class Harview < Formula
 
   desc "CLI that dumps HAR to a human-readable summary"
   homepage "https://github.com/fboender/harview"
-  license "MIT"
   version "ad7d387"
+  license "MIT"
 
   head "https://github.com/fboender/harview.git"
 

@@ -1,21 +1,20 @@
 class Xsos < Formula
-  desc "sosreport examiner"
+  desc "Sosreport examiner"
   homepage "https://github.com/ryran/xsos"
-  license "GPL-3.0-or-later"
-
   url "https://github.com/ryran/xsos.git",
     tag: "v0.7.19"
+  license "GPL-3.0-or-later"
 
   head "https://github.com/ryran/xsos.git",
     branch: "master"
-
-  patch :DATA
 
   depends_on "bash"
   depends_on "coreutils"
   depends_on "gawk"
   depends_on "gnu-getopt"
   depends_on "gnu-sed"
+
+  patch :DATA
 
   def install
     bin.install "xsos"

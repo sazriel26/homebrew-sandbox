@@ -1,15 +1,9 @@
 class JiraCli < Formula
-  desc "Jira CLI"
+  desc "Jira Command-Line"
   homepage "https://github.com/ankitpokhrel/jira-cli"
-  license "MIT"
-  version "1.5.1"
-  revision 1
-
   url "https://github.com/ankitpokhrel/jira-cli.git"
-  livecheck do
-    url :head
-    strategy :github_latest
-  end
+  version "1.5.1"
+  license "MIT"
 
   on_macos do
     on_arm do
@@ -61,6 +55,6 @@ class JiraCli < Formula
   end
 
   test do
-    assert_match "#{version}", shell_output("#{bin}/jira-cli version")
+    assert_match "version.to_s", shell_output("#{bin}/jira-cli version")
   end
 end
