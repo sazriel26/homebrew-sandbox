@@ -4,15 +4,8 @@ class Harview < Formula
   desc "CLI that dumps HAR to a human-readable summary"
   homepage "https://github.com/fboender/harview"
   license "MIT"
-  version "20230711"
 
   url "https://github.com/fboender/harview.git"
-
-  livecheck do
-    skip "There is no known version"
-  end
-
-#  depends_on "python"
 
   uses_from_macos "python"
 
