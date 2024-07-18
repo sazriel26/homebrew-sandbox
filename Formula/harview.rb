@@ -6,7 +6,7 @@ class Harview < Formula
   license "MIT"
   version "ad7d387"
 
-  url "https://github.com/fboender/harview.git"
+  head "https://github.com/fboender/harview.git"
 
   depends_on "python"
 
