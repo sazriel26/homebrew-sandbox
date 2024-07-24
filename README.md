@@ -31,8 +31,6 @@ Here are some miscallenous [Homebrew](https://brew.sh)
 [formulas](https://docs.brew.sh/Formula-Cookbook) of programs publicly 
 available on Internet.
 
-### Unsorted
-
 * [harview](Formula/harview.rb) (`brew install harview`)
   [Homepage](https://github.com/fboender/harview)
 
@@ -41,19 +39,6 @@ available on Internet.
 
 * [xsos](Formula/xsos.rb) (`brew install --HEAD xsos`)
   [Homepage](https://github.com/ryran/xsos)
-
-* [ydb-cli](Formula/ydb-cli.rb) (`brew install ydb-cli`)
-  [Homepage](https://ydb.tech)
-
-### Nebius Cloud
-
-* [nebius-ncp-ai](Formula/nebius-ncp-ai.rb) (`brew install nebius-ncp-ai`)
-  [Official documentation](https://nebius.ai/docs/cli)
-
-* [nebius-ncp-il](Formula/nebius-ncp-il.rb) (`brew install nebius-ncp-il`)
-  [Official documentation](https://nebius.com/il/docs/cli)
-
-### Yandex DB
 
 * [ydb-cli](Formula/ydb-cli.rb) (`brew install ydb-cli`)
   [Official documentation](https://ydb.tech/en/docs/reference/ydb-cli/)
