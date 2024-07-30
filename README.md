@@ -37,6 +37,9 @@ available on Internet.
 * [jira-cli](Formula/jira-cli.rb) (`brew install jira-cli`)
   [Homepage](https://github.com/ankitpokhrel/jira-cli)
 
+* [sos](Formula/sos.rb) (`brew install sos`)
+  [Homepage](https://github.com/sosreport/sos)
+
 * [xsos](Formula/xsos.rb) (`brew install --HEAD xsos`)
   [Homepage](https://github.com/ryran/xsos)
 
