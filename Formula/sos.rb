@@ -105,7 +105,33 @@ class Sos < Formula
     end
   end
 
+  patch :DATA
+
   def install
     virtualenv_install_with_resources
   end
+
+  def caveats
+    <<~EOS
+      Consult homepage: #{homepage}
+
+      Current MacOS support is EXPERIMENTAL
+      See https://github.com/sazriel26/sos-forked/tree/macos-support
+    EOS
+  end
 end
+__END__
+diff --git a/sos/policies/__init__.py b/sos/policies/__init__.py
+index 7f02141..c7d30af 100644
+--- a/sos/policies/__init__.py
++++ b/sos/policies/__init__.py
+@@ -43,7 +43,7 @@ def load(cache={}, sysroot=None, init=None, probe_runtime=True,
+                                          probe_runtime=probe_runtime,
+                                          remote_exec=remote_exec)
+
+-    if sys.platform != 'linux':
++    if not sys.platform in ['linux', 'darwin']:
+         raise Exception("SoS is not supported on this platform")
+
+     if 'policy' not in cache:
+
