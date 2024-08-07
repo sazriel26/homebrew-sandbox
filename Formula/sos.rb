@@ -9,6 +9,11 @@ class Sos < Formula
 
   head "https://github.com/sosreport/sos.git"
 
+  livecheck do
+    url :stable
+    strategy :github_releases
+  end
+
   option "without-magic", "Disable python magic module"
   option "without-requests", "Disable python requests module"
   option "with-boto3", "Enable python boto3 module"
