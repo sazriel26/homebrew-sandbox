@@ -110,7 +110,9 @@ class Sos < Formula
     end
   end
 
-  patch :DATA
+  patch do
+    url "https://gist.githubusercontent.com/sazriel26/d6138ce95fa1ca2b1f9f809ccdca637f/raw/4602b2eb63a273f216edf17cd636eb5f8397cdd9/sos-darwin-support.patch"
+  end
 
   def install
     virtualenv_install_with_resources
@@ -125,18 +127,3 @@ class Sos < Formula
     EOS
   end
 end
-__END__
-diff --git a/sos/policies/__init__.py b/sos/policies/__init__.py
-index 7f02141..c7d30af 100644
---- a/sos/policies/__init__.py
-+++ b/sos/policies/__init__.py
-@@ -43,7 +43,7 @@ def load(cache={}, sysroot=None, init=None, probe_runtime=True,
-                                          probe_runtime=probe_runtime,
-                                          remote_exec=remote_exec)
-
--    if sys.platform != 'linux':
-+    if not sys.platform in ['linux', 'darwin']:
-         raise Exception("SoS is not supported on this platform")
-
-     if 'policy' not in cache:
-
