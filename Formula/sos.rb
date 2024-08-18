@@ -38,8 +38,8 @@ class Sos < Formula
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/ff/08/b6768d9f2da231c1396490e91471ffebb12b299a65cb369c27ec0e2a50c6/pyyaml-6.0.2rc1.tar.gz"
-    sha256 "826fb4d5ac2c48b9d6e71423def2669d4646c93b6c13612a71b3ac7bb345304b"
+    url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
+    sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
   end
 
   unless build.without? "magic"
@@ -71,7 +71,9 @@ class Sos < Formula
       url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
       sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
     end
+  end
 
+  if (build.with? "requests") || (build.with? "boto3")
     resource "urllib3" do
       url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
       sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
@@ -80,13 +82,13 @@ class Sos < Formula
 
   if build.with? "boto3"
     resource "boto3" do
-      url "https://files.pythonhosted.org/packages/29/ee/4db7fe7b58a747c8903552f55a6627385756a8a9815517e69be8c9a4dc63/boto3-1.34.150.tar.gz"
-      sha256 "894b222f7850b870a7ac63d7e378ac36c5c34375da24ddc30e131d9fafe369dc"
+      url "https://files.pythonhosted.org/packages/fd/a8/e825d84cdcf9136cedc89c1f317f80023179685f83469a6ad04b3b0709f4/boto3-1.35.0.tar.gz"
+      sha256 "bdc242e3ea81decc6ea551b04b2c122f088c29269d8e093b55862946aa0fcfc6"
     end
 
     resource "botocore" do
-      url "https://files.pythonhosted.org/packages/27/ef/a33cbd4886826ee69f0c76b7f091986e018c4f38596f39deaa03f1d9e753/botocore-1.34.150.tar.gz"
-      sha256 "4d23387e0f076d87b637a2a35c0ff2b8daca16eace36b63ce27f65630c6b375a"
+      url "https://files.pythonhosted.org/packages/38/f5/2b9df08eb22ecc0407e08086ec5c1a424ce66237f3b9fc0b6686712be247/botocore-1.35.0.tar.gz"
+      sha256 "6ab2f5a5cbdaa639599e3478c65462c6d6a10173dc8b941bfc69b0c9eb548f45"
     end
 
     resource "jmespath" do
