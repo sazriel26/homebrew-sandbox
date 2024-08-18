@@ -4,8 +4,8 @@ class Sos < Formula
   desc "Unified tool for collecting system logs and other debug information"
   homepage "https://github.com/sosreport/sos"
   url "https://github.com/sosreport/sos.git",
-    tag: "4.7.2"
-  license "GPL-2.0-only"
+    tag: "4.8.0"
+  license "GPL-2.0-or-later"
 
   head "https://github.com/sosreport/sos.git"
 
@@ -111,7 +111,7 @@ class Sos < Formula
   end
 
   patch do
-    url "https://gist.githubusercontent.com/sazriel26/d6138ce95fa1ca2b1f9f809ccdca637f/raw/4602b2eb63a273f216edf17cd636eb5f8397cdd9/sos-darwin-support.patch"
+    url "https://gist.githubusercontent.com/sazriel26/756813ef520f399956597c292a807104/raw/430f4d32a15e4cd316ec433ac119196818ba7b43/4.8.0-darwin-support.diff"
   end
 
   def install
