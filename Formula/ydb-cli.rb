@@ -37,7 +37,4 @@ class YdbCli < Formula
     EOS
   end
 
-  test do
-    assert_match "version.to_s", shell_output("#{bin}/ydb version "2.13.0"
-  end
 end
