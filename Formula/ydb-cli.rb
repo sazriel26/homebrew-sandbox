@@ -1,7 +1,7 @@
 class YdbCli < Formula
   desc "Yandex DB CLI"
   homepage "https://ydb.tech"
-  version "2.11.0"
+  version "2.13.0"
   license :cannot_represent
 
   livecheck do
@@ -38,6 +38,6 @@ class YdbCli < Formula
   end
 
   test do
-    assert_match "version.to_s", shell_output("#{bin}/ydb version --semantic")
+    assert_match "version.to_s", shell_output("#{bin}/ydb version "2.13.0"
   end
 end
