@@ -2,7 +2,7 @@ class JiraCli < Formula
   desc "Jira Command-Line"
   homepage "https://github.com/ankitpokhrel/jira-cli"
   url "https://github.com/ankitpokhrel/jira-cli.git"
-  version "1.5.1"
+  version "1.5.2"
   license "MIT"
 
   on_macos do
