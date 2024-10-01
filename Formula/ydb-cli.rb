@@ -2,7 +2,7 @@ class YdbCli < Formula
   desc "Yandex DB CLI"
   homepage "https://ydb.tech"
   version "2.13.0"
-  license :cannot_represent
+  license "Apache-2.0"
 
   livecheck do
     url "https://storage.yandexcloud.net/yandexcloud-ydb/release/stable"
@@ -36,5 +36,4 @@ class YdbCli < Formula
       For more information, please kindly consult #{homepage}/en/docs/reference/ydb-cli/
     EOS
   end
-
 end
