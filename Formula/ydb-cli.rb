@@ -1,7 +1,7 @@
 class YdbCli < Formula
   desc "Yandex DB CLI"
   homepage "https://ydb.tech"
-  version "2.13.0"
+  version "2.14.0"
   license "Apache-2.0"
 
   livecheck do
