@@ -1,7 +1,7 @@
 class YdbCli < Formula
   desc "Yandex DB CLI"
   homepage "https://ydb.tech"
-  version "2.14.0"
+  #version ""
   license "Apache-2.0"
 
   livecheck do
@@ -11,9 +11,11 @@ class YdbCli < Formula
 
   on_macos do
     on_arm do
+      version "2.13.0"
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/arm64/ydb", using: :nounzip
     end
     on_intel do
+      version "2.14.0"
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/amd64/ydb", using: :nounzip
     end
   end
@@ -21,6 +23,7 @@ class YdbCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
+        version "2.14.0"
         url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/linux/amd64/ydb", using: :nounzip
       end
     end
