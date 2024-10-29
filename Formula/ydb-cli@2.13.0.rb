@@ -23,6 +23,6 @@ class YdbCliAT2130 < Formula
   end
 
   def install
-    libexec.install "ydb" => "ydb-#{version}"
+    bin.install "ydb" => "ydb-#{version}"
   end
 end
