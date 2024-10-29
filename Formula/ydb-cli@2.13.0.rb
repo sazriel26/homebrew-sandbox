@@ -7,6 +7,7 @@ class YdbCliAT2130 < Formula
   on_macos do
     on_arm do
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/arm64/ydb", using: :nounzip
+      sha256 "9fd53c4ac2ca759cbf37e4cce2d7e531a7d0641124e003bd13e78da0b449c2c5"
     end
     on_intel do
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/amd64/ydb", using: :nounzip
