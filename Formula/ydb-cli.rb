@@ -2,6 +2,7 @@ class YdbCli < Formula
   desc "Yandex DB CLI"
   homepage "https://ydb.tech"
   license "Apache-2.0"
+  url "http://127.0.0.1"
 
   livecheck do
     url "https://storage.yandexcloud.net/yandexcloud-ydb/release/stable"
