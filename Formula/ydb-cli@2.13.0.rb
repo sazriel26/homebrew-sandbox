@@ -11,6 +11,7 @@ class YdbCliAT2130 < Formula
     end
     on_intel do
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/amd64/ydb", using: :nounzip
+      sha256 "936c53f98e763cbd08e5b710dc912df1afe257e9807a1e42c902084f3b0f1202"
     end
   end
 
@@ -18,6 +19,7 @@ class YdbCliAT2130 < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/linux/amd64/ydb", using: :nounzip
+        sha256 "69106f1b39b9a50d1e17a6e27cc5dd346e7764aaf2a741fb6458d8086dbe012a"
       end
     end
   end

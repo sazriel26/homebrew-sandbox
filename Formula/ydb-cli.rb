@@ -28,6 +28,10 @@ class YdbCli < Formula
 
   depends_on "ydb-cli@#{version}"
 
+  def install
+    opoo "This formula is virtual - nothing to install"
+  end
+
   def caveats
     <<~EOS
       For more information, please kindly consult #{homepage}/en/docs/reference/ydb-cli/
