@@ -11,7 +11,7 @@ class YdbCliAT2150 < Formula
 
   on_macos do
     on_arm do
-      deprecate! date: 2024-10-29, because: :unsupported
+      deprecate! date: "2024-10-29", because: :unsupported
     end
     on_intel do
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/amd64/ydb", using: :nounzip
