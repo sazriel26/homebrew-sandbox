@@ -26,10 +26,10 @@ class YdbCli < Formula
     end
   end
 
-  depends_on "ydb-cli@#{version}.to_s"
+  depends_on "ydb-cli@#{version}"
 
   def install
-    bin.install_symlink bin/"ydb" => libexec/"ydb-#{version}.to_s"
+    bin.install_symlink bin/"ydb" => libexec/"ydb-#{version}"
   end
 
   def caveats
