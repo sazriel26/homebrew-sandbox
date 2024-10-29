@@ -25,6 +25,6 @@ class YdbCliAT2130 < Formula
   end
 
   def install
-    bin.install "ydb"
+    bin.install "ydb" => "ydb.#{version}"
   end
 end

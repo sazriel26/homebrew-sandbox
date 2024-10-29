@@ -29,7 +29,7 @@ class YdbCli < Formula
   depends_on "ydb-cli@#{version}"
 
   def install
-    opoo "This formula is virtual - nothing to install"
+    bin.install_symlink bin/"ydb.#{version}" => "ydb"
   end
 
   def caveats
