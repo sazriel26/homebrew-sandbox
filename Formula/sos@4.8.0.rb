@@ -1,4 +1,4 @@
-class SosAT4.8.0 < Formula
+class SosAT480 < Formula
   include Language::Python::Virtualenv
 
   desc "Unified tool for collecting system logs and other debug information"
