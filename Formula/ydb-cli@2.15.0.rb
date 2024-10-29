@@ -4,11 +4,6 @@ class YdbCliAT2150 < Formula
   version "2.15.0"
   license "Apache-2.0"
 
-  livecheck do
-    url "https://storage.yandexcloud.net/yandexcloud-ydb/release/stable"
-    regex(/^(.+)$/i)
-  end
-
   on_macos do
     on_arm do
       disable! date: "2024-10-29", because: :unsupported
@@ -30,13 +25,6 @@ class YdbCliAT2150 < Formula
   end
 
   def install
-    # Only one binary to link
-    bin.install "ydb"
-  end
-
-  def caveats
-    <<~EOS
-      For more information, please kindly consult #{homepage}/en/docs/reference/ydb-cli/
-    EOS
+    libexec.install "ydb-#{version}.to_s" => "ydb"
   end
 end

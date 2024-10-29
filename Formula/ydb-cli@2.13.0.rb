@@ -4,11 +4,6 @@ class YdbCliAT2130 < Formula
   version "2.13.0"
   license "Apache-2.0"
 
-  livecheck do
-    url "https://storage.yandexcloud.net/yandexcloud-ydb/release/stable"
-    regex(/^(.+)$/i)
-  end
-
   on_macos do
     on_arm do
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/arm64/ydb", using: :nounzip
@@ -27,13 +22,6 @@ class YdbCliAT2130 < Formula
   end
 
   def install
-    # Only one binary to link
-    bin.install "ydb"
-  end
-
-  def caveats
-    <<~EOS
-      For more information, please kindly consult #{homepage}/en/docs/reference/ydb-cli/
-    EOS
+    libexec.install "ydb-#{version}.to_s" => "ydb"
   end
 end
