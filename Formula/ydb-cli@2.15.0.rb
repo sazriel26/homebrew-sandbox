@@ -12,6 +12,7 @@ class YdbCliAT2150 < Formula
   on_macos do
     on_arm do
       disable! date: "2024-10-29", because: :unsupported
+      url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/arm64/ydb", using: :nounzip
     end
     on_intel do
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/amd64/ydb", using: :nounzip
