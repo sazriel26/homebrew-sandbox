@@ -12,6 +12,7 @@ class SosAT480 < Formula
   livecheck do
     url :stable
     strategy :github_releases
+    skip "Not applicable for this formula"
   end
 
   option "without-magic", "Disable python magic module"
