@@ -1,0 +1,16 @@
+name: Delete Git branch of closed Pull Requests
+
+on:
+  pull_request:
+    types:
+      - closed
+
+permissions:
+  contents: write
+
+jobs:
+  delete_branch:
+    uses: sazriel26/github-actions-sandbox/.github/workflows/git-delete-closed-pr-branch.yml@main
+    with:
+      dry-run: false
+
