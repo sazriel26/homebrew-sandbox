@@ -6,6 +6,7 @@ class JiraCli < Formula
   license "MIT"
 
   on_macos do
+    version "1.5.2" # @github-actions-macos-latest@
     on_arm do
       url "#{homepage}/releases/download/v#{version}/jira_#{version}_macOS_arm64.tar.gz"
     end
@@ -15,6 +16,7 @@ class JiraCli < Formula
   end
 
   on_linux do
+    version "1.5.2" # @github-actions-ubuntu-latest@
     on_arm do
       url "#{homepage}/releases/download/v#{version}/jira_#{version}_linux_arm64.tar.gz"
     end

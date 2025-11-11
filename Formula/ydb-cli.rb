@@ -19,7 +19,7 @@ class YdbCli < Formula
       end
     end
     on_intel do
-      version "2.15.0"
+      version "2.15.0" # @github-actions-macos-latest@
       url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/darwin/amd64/ydb", using: :nounzip
       sha256 "c8b766d9ea4f28971b802a2462da471ac6dbb2a09c3c5820c079e0e493ebc42f"
     end
@@ -28,7 +28,7 @@ class YdbCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        version "2.15.0"
+        version "2.15.0" # @github-actions-ubuntu-latest@
         url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/linux/amd64/ydb", using: :nounzip
         sha256 "631edb9ed0851ae9c899bf91fb22f7ebe4c44b200aa5aa0c39877441e4133735"
       end
