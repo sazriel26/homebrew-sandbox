@@ -28,7 +28,7 @@ class YdbCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        version "2.29.0" # @github-actions-ubuntu-latest@
+        version "2.30.0" # @github-actions-ubuntu-latest@
         url "https://storage.yandexcloud.net/yandexcloud-ydb/release/#{version}/linux/amd64/ydb", using: :nounzip
         sha256 "631edb9ed0851ae9c899bf91fb22f7ebe4c44b200aa5aa0c39877441e4133735"
       end
